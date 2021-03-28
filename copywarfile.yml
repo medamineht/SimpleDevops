@@ -1,0 +1,8 @@
+--- 
+- hosts: 192.168.224.202
+  become: true 
+  tasks: 
+    - name: copy war onto tomcat servers 
+      copy: 
+          src: /opt/playbooks/webapp/target/webapp.war 
+          dest: /var/lib/tomcat9/webapps 
