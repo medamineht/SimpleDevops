@@ -1,0 +1,16 @@
+---
+- hosts: tomcat
+  #become: true
+  tasks:
+    - name: stop previous version docker
+      shell: docker stop simple_demo
+      ignore_errors: yes 
+    - name: remove stopped container
+      shell: docker rm -f simple_demo
+      ignore_errors: yes 
+    - name: remove docker images
+      shell: docker image rm -f hadjtaiebsofttodo/simple_demo
+      ignore_errors: yes 
+    - name: run container war_demo2
+      shell: docker run -d --name simple_demo -p 8090:8080 hadjtaiebsofttodo/simple_demo
+      ignore_errors: yes 
