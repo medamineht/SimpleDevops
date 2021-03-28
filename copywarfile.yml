@@ -1,5 +1,5 @@
 --- 
-- hosts: 192.168.224.202
+- hosts: tomcat
   become: true 
   tasks: 
     - name: copy war onto tomcat servers 
