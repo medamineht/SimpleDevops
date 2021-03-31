@@ -8,7 +8,7 @@
   - name: cp war-service
     copy:
       src: /opt/k8s-lab/war-service.yml
-      dest: /home/vagrant/war-service.yml
+      dest: /home/ansadmin/war-service.yml
 
   - name: delete a service
     command: kubectl delete -f war-service.yml

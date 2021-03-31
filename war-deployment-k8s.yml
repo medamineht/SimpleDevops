@@ -8,7 +8,7 @@
   - name: cp war-deployment
     copy:
       src: /opt/k8s-lab/war-deploy.yml
-      dest: /home/vagrant/war-deploy.yml
+      dest: /home/ansadmin/war-deploy.yml
 
   - name: delete a deployment
     command: kubectl delete -f war-deploy.yml
